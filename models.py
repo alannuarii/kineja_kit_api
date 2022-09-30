@@ -6,7 +6,7 @@ class Unit(Base):
     __tablename__ = 'unit'
     id = Column(Integer, primary_key=True, autoincrement=True)
     nama_unit = Column(String(20), nullable=False)
-    spesifikasis = relationship('Spesifikasi', backref='unit', cascade="all, delete-orphan")
+    spesifikasis = relationship('Spesifikasi', backref='unit_kit', cascade="all, delete-orphan")
 
     def __repr__(self):
         return self.nama_unit
